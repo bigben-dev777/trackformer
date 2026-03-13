@@ -182,16 +182,16 @@ def train(args: Namespace) -> None:
                     resume_state_dict[k] = v
                     print(f'Load {k} {tuple(v.shape)} from scratch.')
                     continue
-                # if checkpoint_value.shape[1] * 2 == v.shape[1]:
-                #     # from hidden size 256 to 512
-                #     resume_value = checkpoint_value.repeat(1, 2)
-                # elif checkpoint_value.shape[0] * 5 == v.shape[0]:
-                #     # from 100 to 500 object queries
-                #     resume_value = checkpoint_value.repeat(5, 1)
-                # elif checkpoint_value.shape[0] > v.shape[0]:
-                #     resume_value = checkpoint_value[:v.shape[0]]
-                # elif checkpoint_value.shape[0] < v.shape[0]:
-                #     resume_value = v
+                if checkpoint_value.shape[1] * 2 == v.shape[1]:
+                    # from hidden size 256 to 512
+                    resume_value = checkpoint_value.repeat(1, 2)
+                elif checkpoint_value.shape[0] * 5 == v.shape[0]:
+                    # from 100 to 500 object queries
+                    resume_value = checkpoint_value.repeat(5, 1)
+                elif checkpoint_value.shape[0] > v.shape[0]:
+                    resume_value = checkpoint_value[:v.shape[0]]
+                elif checkpoint_value.shape[0] < v.shape[0]:
+                    resume_value = v
                         # else:
                         #     raise NotImplementedError
                 elif 'linear2' in k or 'input_proj' in k:
