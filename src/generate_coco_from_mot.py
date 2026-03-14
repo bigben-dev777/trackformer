@@ -30,7 +30,8 @@ MOT_15_SEQS_INFO = {
     'KITTI-17': {'img_width': 1224, 'img_height': 370, 'seq_length': 145},
     'PETS09-S2L1': {'img_width': 768, 'img_height': 576, 'seq_length': 795},
     'TUD-Campus': {'img_width': 640, 'img_height': 480, 'seq_length': 71},
-    'TUD-Stadtmitte': {'img_width': 640, 'img_height': 480, 'seq_length': 179},}
+    # 'TUD-Stadtmitte': {'img_width': 640, 'img_height': 480, 'seq_length': 179},}
+}
 
 
 def generate_coco_from_mot(split_name='train', seqs_names=None,
