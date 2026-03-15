@@ -27,11 +27,10 @@ MOT_15_SEQS_INFO = {
     'ETH-Bahnhof': {'img_width': 640, 'img_height': 480, 'seq_length': 1000},
     'ETH-Sunnyday': {'img_width': 640, 'img_height': 480, 'seq_length': 354},
     'KITTI-13': {'img_width': 1242, 'img_height': 375, 'seq_length': 340},
-    'KITTI-17': {'img_width': 1224, 'img_height': 370, 'seq_length': 145},
-    'PETS09-S2L1': {'img_width': 768, 'img_height': 576, 'seq_length': 795},
-    'TUD-Campus': {'img_width': 640, 'img_height': 480, 'seq_length': 71},
-    # 'TUD-Stadtmitte': {'img_width': 640, 'img_height': 480, 'seq_length': 179},}
-}
+    # 'KITTI-17': {'img_width': 1224, 'img_height': 370, 'seq_length': 145},
+    # 'PETS09-S2L1': {'img_width': 768, 'img_height': 576, 'seq_length': 795},
+    # 'TUD-Campus': {'img_width': 640, 'img_height': 480, 'seq_length': 71},
+    'TUD-Stadtmitte': {'img_width': 640, 'img_height': 480, 'seq_length': 179},}
 
 
 def generate_coco_from_mot(split_name='train', seqs_names=None,
