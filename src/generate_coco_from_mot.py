@@ -48,8 +48,8 @@ def generate_coco_from_mot(split_name='train', seqs_names=None,
     root_split_mots_path = os.path.join(MOTS_ROOT, root_split)
     coco_dir = os.path.join(data_root, split_name)
 
-    if os.path.isdir(coco_dir):
-        shutil.rmtree(coco_dir)
+    # if os.path.isdir(coco_dir):
+    #     shutil.rmtree(coco_dir)
 
     os.mkdir(coco_dir)
 
